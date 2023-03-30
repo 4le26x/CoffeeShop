@@ -1,0 +1,257 @@
+:root{
+    --headingFont: 'PT Sans',  sans-serif;
+    --PargraphFont: 'Open Sans', sans-serif;
+
+
+    --primary: #784d3c;
+    --gray: #e1e1e1;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1 rem = 10px*/
+
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--PargraphFont);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+/*Globals*/
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+
+}
+h1,h2,h3,h4{
+    font-family: var(--headingFont);
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-family: 4rem;
+}
+h3{
+    font-family: 3.5rem;
+}
+h4{
+    font-family: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+/* Utilities */
+.no-margin{
+    margin: 0;
+
+}
+.no-padding{
+    padding: 0;
+}
+.center-text{
+    text-align: center;
+}
+
+/* header */
+.webp .header{
+    background-image: url(/img/banner.webp);
+}
+.no-webp .header{
+    background-image: url(/img/banner.jpg);
+}
+.header{
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center ;
+}
+.header_text{
+    text-align: center;
+    color: var(--white);
+    margin-top: 5rem;
+}
+@media (min-width: 768px) {
+    .header_text{
+        margin-top: 15rem;
+    }
+}
+.nav{
+    padding-top: 4rem;
+}
+@media (min-width: 768px) {
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.logo{
+    color: var(--white);
+}
+.logo_name{
+    font-weight: normal;
+}
+.logo_bold{
+    font-weight: bold;
+}
+@media (min-width: 768px) {
+    .navegation{
+        display: flex;
+        gap: 2rem;
+    }
+}
+.navegation_link{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+@media (min-width:768px) {
+    .principal-content{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+.entry{
+    border-bottom: 1px solid var(--gray) ;
+    margin-bottom: 2rem;
+}
+.entry:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+.button{
+    display: block;
+    font-family: var(--headingFont);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+}
+@media (min-width: 768px) {
+    .button{
+        display: inline-block;
+    }
+}
+.button:hover{
+    cursor: pointer;
+}
+.button--primary{
+    background-color:var(--black);
+}
+.button--secundary{
+    background-color: var(--primary);
+}
+.courses{
+    list-style: none;
+}
+.widget-course{
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 2rem;
+}
+.widget-course:last-of-type{
+    border-bottom: none;
+    margin-bottom: none;
+}
+.widget-course_label{
+    font-family: var(--headingFont);
+    font-weight: bold;
+}
+.widget-course_info{
+    font-weight: normal;
+}
+.widget-course_info,
+.widget-course_label{
+    font-size: 2rem;
+}
+.footer{
+    background-color: var(--black);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+/* About Us Page */
+@media (min-width:768px) {
+    .about-us{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+/* Courses */
+.course{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gray);
+}
+@media (min-width:768px) {
+    .course{
+        display: grid;
+        grid-template-columns: 1fr 2fr ;
+        column-gap: 2rem;
+    }
+}
+.course:last-of-type{
+    border: none ;
+}
+.course:last-of-type{
+    border-bottom: none;
+    margin-bottom: none;
+}
+.course_label{
+    font-family: var(--headingFont);
+    font-weight: bold;
+}
+.course_info{
+    font-weight: normal;
+}
+.course_info,
+.course_label{
+    font-size: 2rem;
+}
+
+/* Contact Section */
+.contact-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form{
+    background-color: var(--white);
+    margin:-5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.field{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.field_label{
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+.field_input{
+    flex: 1;
+    border: 1px solid var(--gray);
+}
+.field_textarea{
+    height: 20rem;
+}
